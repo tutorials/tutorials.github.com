@@ -8,7 +8,6 @@ plugins:     ./_plugins
 future:      true
 lsi:         false
 pygments:    true
-markdown:    redcarpet
 permalink:   date
 
 rdiscount:
