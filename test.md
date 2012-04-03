@@ -8,7 +8,7 @@ Hello, World!
 
 This is a teadsfst of _markdown_ **support**
 
-This is some code to test pygments support:
+This is some code to jekyll's pygments support:
 
 {% highlight ruby %}
 def function(*args)
@@ -16,6 +16,7 @@ def function(*args)
 end
 {% endhighlight %}
 
+This is some code to GFM's pygments support:
 
 ```ruby
 require 'redcarpet'
