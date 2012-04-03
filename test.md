@@ -1,0 +1,34 @@
+---
+layout: default
+title: Test
+---
+
+Hello, World!
+====
+
+This is a teadsfst of _markdown_ **support**
+
+This is some code to test pygments support:
+
+{% highlight ruby %}
+def function(*args)
+  puts "Hello, #{@world}!"
+end
+{% endhighlight %}
+
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+Here's a test of GFM:
+
+* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1
+
