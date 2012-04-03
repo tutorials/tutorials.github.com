@@ -6,7 +6,7 @@ title: Test
 Hello, World!
 ====
 
-This is a teadsfst of _markdown_ **support**
+This is a test of _markdown_ **support**
 
 This is some code to jekyll's pygments support:
 
