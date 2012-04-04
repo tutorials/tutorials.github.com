@@ -4,7 +4,7 @@ title: Test
 ---
 
 Hello, World!
-====
+=============
 
 This is a test of _markdown_ **support**
 
@@ -33,3 +33,4 @@ Here's a test of GFM:
 * User/#Num: mojombo#1
 * User/Project#Num: mojombo/god#1
 
+How many words are in this page?  {{ page.content | number_of_words }}!
