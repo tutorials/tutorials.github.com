@@ -1,6 +1,6 @@
 ---
 layout: default
-title: tutorials.github.com
+title: Decentralized Polyglot Tutorials
 ---
 
 ### README
