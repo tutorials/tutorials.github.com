@@ -1,36 +1,42 @@
 ---
 layout: default
 title: Test
+
 ---
 
-Hello, World!
-=============
+Javascript Testing
+==================
 
-This is a test of _markdown_ **support**
+This is a test of the javascript-based filtering code.  The idea is that there are divs with `data-foo=bar` data attributes that are used to list key-value pairs that javascript uses to "facet" the document with.
 
-This is some code to jekyll's pygments support:
+For example, a div like this:
 
-{% highlight ruby %}
-def function(*args)
-  puts "Hello, #{@world}!"
-end
+{% highlight html %}
+<div data-operating-system="OS X" data-package-management="Homebrew">
+  ...
+</div>
+
+<div data-operating-system="OS X" data-package-management="Source">
+  ...
+</div>
+
+<div data-operating-system="Ubuntu" data-package-management="Source">
+  ...
+</div>
 {% endhighlight %}
 
-This is some code to GFM's pygments support:
+should show the following sidebar:
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+```
+Operating System
+  OS X (2)
+  Ubuntu (1)
+
+Package Management
+  Homebrew (1)
+  Source (2)
 ```
 
-Here's a test of GFM:
+This allows users to filter the document by those attributes which are relavent to them.
 
-* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* \#Num: #1
-* User/#Num: mojombo#1
-* User/Project#Num: mojombo/god#1
-
-How many words are in this page?  {{ page.content | number_of_words }}!
+Note the following empty liquid call used to force syntax highlighting: {{ }}
