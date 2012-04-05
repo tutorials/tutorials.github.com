@@ -38,7 +38,7 @@ should show the following sidebar:
       Homebrew (1)
       Source (2)
 
-This allows users to filter the document by those attributes which are relavent to them.
+This allows users to filter the document by those attributes which are relevant to them.
 
 Note the following empty liquid call used to force syntax highlighting: {{ }}
 
