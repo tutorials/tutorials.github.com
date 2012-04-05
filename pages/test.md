@@ -27,15 +27,13 @@ For example, a div like this:
 
 should show the following sidebar:
 
-```
-Operating System
-  OS X (2)
-  Ubuntu (1)
+    Operating System
+      OS X (2)
+      Ubuntu (1)
 
-Package Management
-  Homebrew (1)
-  Source (2)
-```
+    Package Management
+      Homebrew (1)
+      Source (2)
 
 This allows users to filter the document by those attributes which are relavent to them.
 
