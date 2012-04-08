@@ -45,8 +45,6 @@ should show the following sidebar:
 
 This allows users to filter the document by those attributes which are relevant to them.
 
-Note the following empty liquid call used to force syntax highlighting: {{ }}
-
 <section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
 This is the tutorial written for _OS X_ and _Homebrew_.
 It has data attributes on the preceeding `hr` tag.
