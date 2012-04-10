@@ -19,6 +19,17 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30727234-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -42,5 +53,21 @@
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <script id="sidebar_template" type="text/x-underscore" charset="utf-8">
+      <% _(visible).each(function(values, name) { %>
+        <h3><%= name %> (<%= visible_counts[name] %>)</h3>
+        <ul>
+          <% _(values).each(function(count, val) { %>
+            <li data-name="<%= name %>", data-value="<%= val %>">
+              <% if(_(filters).any(function(filter) { return filter.name === name && filter.value === val; })) { %>
+                <strong><%= val %></strong>
+              <% } else { %>
+                <%= val %> (<%= count %>)
+              <% } %>
+            </li>
+          <% }) %>
+        </ul>
+      <% }) %>
+    </script>
   </body>
 </html>
