@@ -35,7 +35,7 @@ $(function() {
     if(existing_filter) {
       filters = _(filters).without(existing_filter);
     } else {
-      filters = _(filters).reject(function(filter) { return filter.name === target.name; });
+      filters = _(filters).reject(function(filter) { return filter.name === target.name && filter.value === target.value; });
       filters.push(target);
     }
     redraw();
