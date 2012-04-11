@@ -6,29 +6,29 @@ title: Test
 Javascript Testing
 ==================
 
-Testing kramdown's options syntax: {::nomarkdown}**I'm weak, not strong!**{:/}!
-
 This is a test of the javascript-based filtering code.
-The idea is that there are sections with `data-facets={"some": "json"}` data attributes that are used to list key-value pairs that javascript uses to "facet" the document with.
+The idea is that there are divs with `data-facets={"some": "json"}` data attributes that are used to list key-value pairs that javascript uses to "facet" the document with.
 
 We store JSON because jQuery automatically converts HTML5 data attributes into `camelCase`, so we'd lose formatting.
 
-Valid sections should have `class="tutorial"` (because we allow nested sections).
+We also use the `markdown="1"` attribute to tell [kramdown](https://github.com/gettalong/kramdown) (our markdown parser) to parse the content of the divs as markdown.
+
+Valid divs should have `class="tutorial"` (because we allow nested divs).
 
 For example, a document like this:
 
 {% highlight html %}
-<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
   ...
-</section>
+</div>
 
-<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
   ...
-</section>
+</div>
 
-<section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
   ...
-</section>
+</div>
 {% endhighlight %}
 
 should show the following sidebar:
@@ -53,29 +53,23 @@ If you clicked on the "Source (1)" `li` then you should see this:
       Source
 
 <div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
-This is a `div` that's using `markdown="1"` to tell kramdown to render the inner content as markdown.
-
 This is the tutorial written for _OS X_ and _Homebrew_.
 </div>
 
-{::options parse_block_html="true" /}
-
-<div class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
-This is a `div` that's using `{::options parse_block_html="true" /}` to tell kramdown to render the inner content as markdown.
-
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
 This is the tutorial written for _OS X_ and _Source_.
 
-Here's some code:
+Here's some ruby code:
 
-    #!/usr/bin/ruby
+{% highlight ruby %}
+#!/usr/bin/ruby
     
-    puts "Hello, World!"
+puts "Hello, World!"
+{% endhighlight %}
 
 Yay!
 </div>
 
-<section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
-This is a `section` that's using `{::options parse_block_html="true" /}` to tell kramdown to render the inner content as markdown.  It doubles as a test for kramdown's recognition of html5 elements.
-
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
 This is the tutorial written for _Ubuntu_ and _Source_.
-</section>
+</div>

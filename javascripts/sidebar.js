@@ -2,7 +2,7 @@ var tutorials, visible, visible_counts, hidden, dict, filters = [];
 
 $(function() {
   // Grab all tutorials
-  tutorials = $("section.tutorial");
+  tutorials = $("div.tutorial");
 
   // Mark all tutorials as visible
   tutorials.show();
@@ -67,7 +67,7 @@ function update_visibility() {
 };
 
 function update_sidebar() {
-  visible = _.chain($("section.tutorial:visible"))
+  visible = _.chain($("div.tutorial:visible"))
     // Collect all the facets
     .map(function(tutorial) { return $(tutorial).data().facets; })
     // and combine all facets into a nested hash
