@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Test
-
 ---
+{::options parse_block_html="true" /}
 
 Javascript Testing
 ==================
@@ -14,20 +14,18 @@ We store JSON because jQuery automatically converts HTML5 data attributes into `
 
 Valid sections should have `class="tutorial"` (because we allow nested sections).
 
-We also use the `markdown="1"` attribute to tell kramdown that we want to parse the content within the section as markdown.  You can indent your code or not, the choice is up to you (although I prefer to not indent so my editor's syntax highlighting doesn't break).
-
 For example, a document like this:
 
 {% highlight html %}
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
   ...
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
   ...
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
+<section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
   ...
 </section>
 {% endhighlight %}
@@ -57,13 +55,13 @@ If you clicked on the "Source (1)" `li` then you should see this:
 
 That is, "Source" goes to the top of the list and the other lists are filtered.
 
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
 <hr />
 This is the tutorial written for _OS X_ and _Homebrew_.
 It has data attributes on the preceeding `hr` tag.
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
 <hr />
 This is the tutorial written for _OS X_ and _Source_.
 It has data attributes on a surrounding section tag (written in html).
@@ -78,7 +76,7 @@ Here's some code:
 Yay!
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
+<section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
 <hr />
 This is the tutorial written for _Ubuntu_ and _Source_.
 </section>
