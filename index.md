@@ -22,4 +22,9 @@ Contributing
 - Add a new file (or modify an existing one)
 - Send me a pull request
 
+Hi, Hacker News!
+================
+
+I appreciate the upvotes!
+
 Note: This project is not affiliated with GitHub Inc.
