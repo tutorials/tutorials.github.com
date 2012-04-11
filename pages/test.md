@@ -45,12 +45,26 @@ should show the following sidebar:
 
 This allows users to filter the document by those attributes which are relevant to them.
 
+If you clicked on the "Source (1)" `li` then you should see this:
+
+    Operating System (1)
+      Ubuntu (1)
+
+    Package Management (3)
+      Source (Selected)
+      Homebrew (1)
+      Macports (1)
+
+That is, "Source" goes to the top of the list and the other lists are filtered.
+
 <section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+<hr />
 This is the tutorial written for _OS X_ and _Homebrew_.
 It has data attributes on the preceeding `hr` tag.
 </section>
 
 <section class="tutorial" markdown="1" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+<hr />
 This is the tutorial written for _OS X_ and _Source_.
 It has data attributes on a surrounding section tag (written in html).
 It uses kramdown's `markdown="1"` attribute to enable markdown processing within an html tag.
@@ -65,5 +79,6 @@ Yay!
 </section>
 
 <section class="tutorial" markdown="1" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
+<hr />
 This is the tutorial written for _Ubuntu_ and _Source_.
 </section>
