@@ -52,17 +52,18 @@ If you clicked on the "Source (1)" `li` then you should see this:
     Package Management (3)
       Source
 
-<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+<div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
+This is a `div` that's using `markdown="1"` to tell kramdown to render the inner content as markdown.
+
 This is the tutorial written for _OS X_ and _Homebrew_.
-It has data attributes on the preceeding `hr` tag.
-</section>
+</div>
 
 {::options parse_block_html="true" /}
 
-<section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+<div class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
+This is a `div` that's using `{::options parse_block_html="true" /}` to tell kramdown to render the inner content as markdown.
+
 This is the tutorial written for _OS X_ and _Source_.
-It has data attributes on a surrounding section tag (written in html).
-It uses kramdown's parse_block_html option to enable markdown processing within an html tag.
 
 Here's some code:
 
@@ -71,8 +72,10 @@ Here's some code:
     puts "Hello, World!"
 
 Yay!
-</section>
+</div>
 
 <section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
+This is a `section` that's using `{::options parse_block_html="true" /}` to tell kramdown to render the inner content as markdown.  It doubles as a test for kramdown's recognition of html5 elements.
+
 This is the tutorial written for _Ubuntu_ and _Source_.
 </section>
