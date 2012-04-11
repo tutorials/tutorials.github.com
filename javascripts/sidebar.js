@@ -11,8 +11,13 @@ $(function() {
     .reduce(function(lookup, tutorial) {
       _($(tutorial).data().facets).each(function(val, key) {
         if(!_(lookup).has(key)) { lookup[key] = {}; }
-        if(!_(lookup[key]).has(val)) { lookup[key][val] = []; }
-        lookup[key][val].push(tutorial);
+        // We want to be able to have multiple values for vertain
+        // facets, so we convert strings to arrays and iterate over each
+        if(_(val).isString()) { val = [val]; }
+        _(val).each(function(v) {
+          if(!_(lookup[key]).has(v)) { lookup[key][v] = []; }
+          lookup[key][v].push(tutorial);
+        });
       });
       return lookup;
     }, {})
@@ -28,10 +33,8 @@ $(function() {
       return filter.name === target.name && filter.value === target.value;
     });
     if(existing_filter) {
-      console.log("Removing filter: " + existing_filter.name);
       filters = _(filters).without(existing_filter);
     } else {
-      console.log("Applying filter: " + target.name);
       filters = _(filters).reject(function(filter) { return filter.name === target.name; });
       filters.push(target);
     }
@@ -49,13 +52,11 @@ function redraw() {
 
 function update_visibility() {
   // Grab all the tutorials for each facet into an array
-  console.log("Calculating all ...")
   all = _.chain(filters).map(function(filter) {
     return dict[filter.name][filter.value];
   }).flatten().value();
 
   // Only keep the tutorials that are visible
-  console.log("Calculating keep ...")
   keep = _(tutorials).select(function(tutorial) {
     return all.length - _(all).without(tutorial).length === filters.length
   });
@@ -76,9 +77,12 @@ function update_sidebar() {
         // Initialize the names
         if(!_(counts).has(key)) { counts[key] = {}; }
         // and the values/counts
-        if(!_(counts[key]).has(val)) { counts[key][val] = 0; }
-        // then increment the counts
-        counts[key][val] += 1;
+        if(_(val).isString()) { val = [val]; }
+        _(val).each(function(v) {
+          if(!_(counts[key]).has(v)) { counts[key][v] = 0; }
+          // then increment the counts
+          counts[key][v] += 1;
+        });
       });
       return counts;
     // This is where we're storing the new data
