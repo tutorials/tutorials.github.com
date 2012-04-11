@@ -6,8 +6,9 @@ tutorials.github.com is a simple hack that uses GitHub Pages to fulfill a need o
 Examples
 ========
 
-* [Hello, World!](pages/hello-world.html "Hello, World!")
-* [Explanation of how it works](pages/test.html)
+* [Installing MySQL](http://tutorials.github.com/pages/installing-mysql.html)
+* [Hello, World!](http://tutorials.github.com/pages/hello-world.html "Hello, World!")
+* [Explanation of how it works](http://tutorials.github.com/pages/test.html)
 
 Contributing
 ============
