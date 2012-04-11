@@ -2,13 +2,11 @@
 layout: default
 title: Test
 ---
-{::options parse_block_html="true" /}
 
 Javascript Testing
 ==================
 
-Testing kramdown's options syntax:
-Disabling markdown: {::nomarkdown}**I'm weak, not strong!**{:/}!
+Testing kramdown's options syntax: {::nomarkdown}**I'm weak, not strong!**{:/}!
 
 This is a test of the javascript-based filtering code.
 The idea is that there are sections with `data-facets={"some": "json"}` data attributes that are used to list key-value pairs that javascript uses to "facet" the document with.
@@ -52,16 +50,14 @@ If you clicked on the "Source (1)" `li` then you should see this:
       Ubuntu (1)
 
     Package Management (3)
-      Source (Selected)
-      Homebrew (1)
-      Macports (1)
-
-That is, "Source" goes to the top of the list and the other lists are filtered.
+      Source
 
 <section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
 This is the tutorial written for _OS X_ and _Homebrew_.
 It has data attributes on the preceeding `hr` tag.
 </section>
+
+{::options parse_block_html="true" /}
 
 <section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
 This is the tutorial written for _OS X_ and _Source_.
