@@ -7,6 +7,9 @@ title: Test
 Javascript Testing
 ==================
 
+Testing kramdown's options syntax:
+Disabling markdown: {::nomarkdown}**I'm weak, not strong!**{:/}!
+
 This is a test of the javascript-based filtering code.
 The idea is that there are sections with `data-facets={"some": "json"}` data attributes that are used to list key-value pairs that javascript uses to "facet" the document with.
 
@@ -56,16 +59,14 @@ If you clicked on the "Source (1)" `li` then you should see this:
 That is, "Source" goes to the top of the list and the other lists are filtered.
 
 <section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew"}'>
-<hr />
 This is the tutorial written for _OS X_ and _Homebrew_.
 It has data attributes on the preceeding `hr` tag.
 </section>
 
 <section class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Macports"}'>
-<hr />
 This is the tutorial written for _OS X_ and _Source_.
 It has data attributes on a surrounding section tag (written in html).
-It uses kramdown's `markdown="1"` attribute to enable markdown processing within an html tag.
+It uses kramdown's parse_block_html option to enable markdown processing within an html tag.
 
 Here's some code:
 
@@ -77,6 +78,5 @@ Yay!
 </section>
 
 <section class="tutorial" data-facets='{"Operating System": "Ubuntu", "Package Management": "Source"}'>
-<hr />
 This is the tutorial written for _Ubuntu_ and _Source_.
 </section>
