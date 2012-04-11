@@ -109,7 +109,7 @@ int main()
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "C#"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "C#", "Type System": ["Static", "Dynamic"]}'>
 C#
 --
 
@@ -126,7 +126,7 @@ class HelloWorld
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Clojure", "VM": "JVM"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Clojure", "Type System": ["Dynamic", "Semi-Strong"], "VM": "JVM"}'>
 Clojure
 -------
 
@@ -154,7 +154,7 @@ ColdFusion
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Common Lisp"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Common Lisp", "Type System": "Dynamic"}'>
 Common Lisp
 -----------
 
@@ -176,7 +176,7 @@ or
 
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Cython"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Cython", "Type System": ["Dynamic", "Semi-Strong"]}'>
 Cython
 ------
 
@@ -267,7 +267,16 @@ Fancy
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Fortran"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "F#", "Type System": "Static"}'>
+F#
+--
+
+{% highlight fsharp %}
+print_endline "Hello, World!"
+{% endhighlight %}
+</section>
+
+<section class="tutorial" markdown="1" data-facets='{"Language": "Fortran", "Type System": "Static"}'>
 Fortran
 -------
 
@@ -278,16 +287,7 @@ END
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "F#"}'>
-F#
---
-
-{% highlight fsharp %}
-print_endline "Hello, World!"
-{% endhighlight %}
-</section>
-
-<section class="tutorial" markdown="1" data-facets='{"Language": "Groovy", "VM": "JVM"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Groovy", "Type System": "Dynamic", "VM": "JVM"}'>
 Groovy
 ------
 
@@ -296,7 +296,7 @@ println "Hello, World"
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Haskell"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Haskell", "Type System": "Static"}'>
 Haskell
 -------
 
@@ -329,21 +329,12 @@ public class HelloWorld {
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "JavaScript"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "JavaScript", "Type System": "Dynamic"}'>
 JavaScript
 ----------
 
 {% highlight js %}
 document.write('Hello, World!');
-{% endhighlight %}
-</section>
-
-<section class="tutorial" markdown="1" data-facets='{"Language": "JRuby", "Type System": "Dynamic", "VM": "JVM"}'>
-JRuby
------
-
-{% highlight ruby %}
-puts "Hello, World!"
 {% endhighlight %}
 </section>
 
@@ -356,7 +347,7 @@ Logtalk
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Lua"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Lua", "Type System": "Dynamic"}'>
 Lua
 ---
 
@@ -365,7 +356,7 @@ print "Hello, World!"
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Matlab"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Matlab", "Type System": "Dynamic"}'>
 Matlab
 ------
 
@@ -457,7 +448,7 @@ echo("Hello, World!")
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Objective-C"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Objective-C", "Type System": "Static"}'>
 Objective-C
 -----------
 
@@ -481,7 +472,7 @@ document.write("Hello, World!");
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Octave"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Octave", "Type System": "Dynamic"}'>
 Octave
 ------
 
@@ -490,7 +481,7 @@ printf("Hello, World!\n");
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "OCaml"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "OCaml", "Type System": "Static"}'>
 OCaml
 -----
 
@@ -499,7 +490,7 @@ print_string "Hello, World!\n"
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Perl", "Type System": "Dynamic"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Perl", "Type System": ["Semi-Static", "Dynamic"]}'>
 Perl
 ----
 
@@ -508,7 +499,7 @@ print "Hello, World!\n";
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "PHP"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "PHP", "Type System": "Dynamic"}'>
 PHP
 ---
 
@@ -556,7 +547,7 @@ Write-Host 'Hello, World!`n'
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Prolog"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Prolog", "Type System": "Dynamic"}'>
 Prolog
 ------
 
@@ -574,9 +565,9 @@ print "Hello, World!"
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "R"}'>
-R
--
+<section class="tutorial" markdown="1" data-facets='{"Language": ["R", "S", "S-Plus"]}'>
+R and S and S-Plus
+------------------
 
 {% highlight r %}
 cat("Hello, World!\n")
@@ -611,32 +602,23 @@ hello   dat    72,        101 ; He
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Reia", "VM": "Erlang"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Reia", "Type System": "Dynamic", "VM": "Erlang"}'>
 Reia
 ----
 
     "Hello, World!".puts()
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Ruby", "Type System": "Dynamic"}'>
-Ruby
-----
+<section class="tutorial" markdown="1" data-facets='{"Language": ["Ruby", "JRuby"], "Type System": "Dynamic", "VM": "JVM"}'>
+Ruby and JRuby
+--------------
 
 {% highlight ruby %}
 puts "Hello, World!"
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "S-Plus"}'>
-S-Plus
-------
-
-{% highlight s %}
-cat("Hello, World!\n")
-{% endhighlight %}
-</section>
-
-<section class="tutorial" markdown="1" data-facets='{"Language": "Scala", "VM": "JVM"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Scala", "Type System": "Static", "VM": "JVM"}'>
 Scala
 -----
 
@@ -667,7 +649,7 @@ Scilab
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Smalltalk"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Smalltalk", "Type System": "Dynamic"}'>
 Smalltalk
 ---------
 
@@ -688,7 +670,7 @@ End
 {% endhighlight %}
 </section>
 
-<section class="tutorial" markdown="1" data-facets='{"Language": "Tcl", "Type System": "Weak"}'>
+<section class="tutorial" markdown="1" data-facets='{"Language": "Tcl", "Type System": ["Dynamic", "Weak"]}'>
 Tcl
 ---
 
