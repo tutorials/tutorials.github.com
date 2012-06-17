@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Test
+ignore: true
 ---
 
 Javascript Testing

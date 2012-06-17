@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Decentralized Polyglot Tutorials
+ignore: true
 ---
 
 README
