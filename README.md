@@ -1,7 +1,7 @@
 tutorials.github.com
 ====================
 
-tutorials.github.com is a simple hack that uses GitHub Pages to fulfill a need of mine: easily collecting and forking programming tutorials and offering polyglot versions.
+tutorials.github.com is a simple hack that uses GitHub Pages to fulfill a need of mine: collecting disparate tutorials and allowing others to easily fork them so the full range of languages and systems is covered.
 
 Examples
 ========

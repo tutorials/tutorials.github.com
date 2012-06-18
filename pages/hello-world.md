@@ -8,7 +8,7 @@ Hello, World!
 
 Here are some examples of "Hello, World!" in various programming languages.
 
-<div markdown="1" class="tutorial" data-author="Whitespace" data-facets='{"Language": "ActionScript", "Type System": "Static"}'>
+<div markdown="1" class="tutorial" data-facets='{"Language": "ActionScript", "Type System": "Static"}'>
 ActionScript
 ------------
 

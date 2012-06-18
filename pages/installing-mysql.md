@@ -6,7 +6,13 @@ title: Installing MySQL
 Installing MySQL
 ================
 
-<div markdown="1" class="tutorial" data-author="Whitespace" data-facets='{"Operating System": "Ubuntu", "Package Management": "APT", "MySQL Version": "5.1"}'>
+<div
+  markdown="1"
+  class="tutorial"
+  data-author="Ubuntu Documentation Team"
+  data-source="https://help.ubuntu.com/11.10/serverguide/mysql.html"
+  data-license="https://help.ubuntu.com/legal.html"
+  data-facets='{"Operating System": "Ubuntu 11.10", "Package Management": "APT", "MySQL Version": "5.1"}'>
 To install MySQL, run the following command from a terminal prompt:
 
 {% highlight sh %}
@@ -48,9 +54,17 @@ After making a change to `/etc/mysql/my.cnf` the __mysql__ daemon will need to b
 {% highlight sh %}
 sudo /etc/init.d/mysql restart
 {% endhighlight %}
+
+---------------------------------------------------------
+
 </div>
 
-<div markdown="1" class="tutorial" data-author="Whitespace" data-facets='{"Operating System": "OS X", "Package Management": "Source", "MySQL Version": "5.1"}'>
+<div
+  markdown="1"
+  class="tutorial"
+  data-author-github="hivelogic"
+  data-source="http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/"
+  data-facets='{"Operating System": "OS X", "Package Management": "Source", "MySQL Version": "5.1"}'>
 These are instructions for compiling and installing a 64-bit version of [MySQL](http://www.mysql.com/), the world's most popular open source database, on Mac OS X 10.6 (Snow Leopard).
 
 The benefits of manually building MySQL yourself in `/usr/local` are detailed [here](http://hivelogic.com/articles/using_usr_local/). I also wrote a in-depth explanation of why you might want to build MySQL yourself in my [Compiling MySQL on Leopard](http://hivelogic.com/articles/installing-mysql-on-mac-os-x/) article.
@@ -202,9 +216,17 @@ sudo gem install mysql -- --with-mysql-dir=/usr/local/mysql
 {% endhighlight %}
 
 That should do it.
+
+---------------------------------------------------------
+
 </div>
 
-<div markdown="1" class="tutorial" data-facets='{"Operating System": "OS X", "Package Management": "Homebrew", "MySQL Version": "5.5"}'>
+<div
+  markdown="1"
+  class="tutorial"
+  data-author-github="trey"
+  data-source="http://solutions.trey.cc/2010/02/28/installing-mysql-on-snow-leopard-using-homebrew/"
+  data-facets='{"Operating System": "OS X", "Package Management": "Homebrew", "MySQL Version": "5.5"}'>
 If you already have a `/usr/local` folder and it's not owned by your user:
 
 {% highlight sh %}
@@ -241,3 +263,7 @@ And make sure it automatically starts again on login:
 {% highlight sh %}
 launchctl load -w /usr/local/Cellar/mysql/5.1.43/com.mysql.mysqld.plist
 {% endhighlight %}
+
+---------------------------------------------------------
+
+</div>

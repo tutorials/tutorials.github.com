@@ -7,6 +7,25 @@ $(function() {
   // Mark all tutorials as visible
   tutorials.show();
 
+  // Render license/source information
+  _(tutorials).each(function(tutorial){
+    t = $(tutorial)
+    d = t.data()
+    attribution = ""
+    if(d.authorGithub) {
+      attribution += '<li>Author: <a href="http://github.com/' + d.authorGithub + '">' + d.authorGithub + '</a></li>'
+    } else if(d.author) {
+      attribution += "<li>Author: " + d.author + "</li>"
+    }
+    if(d.source) {
+      attribution += '<li><a href="' + d.source + '">Original Source</a></li>'
+      if(d.license) {
+        attribution += '<li><a href="' + d.license + '">License</a></li>'
+      }
+    }
+    if(attribution) { t.prepend("<ul>" + attribution + "</ul>")}
+  });
+
   dict = _.chain(tutorials)
     .reduce(function(lookup, tutorial) {
       _($(tutorial).data().facets).each(function(val, key) {
