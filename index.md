@@ -15,6 +15,11 @@ In the future, I'll add cookies so the site will apply filters for you and a cen
 
 This project originated as a full-blown rails app backed by a database, and I reached a point where I needed user accounts and git repos.  Dreading that, I threw it all away for a simpler, git-based workflow to upload data.  I sincerely hope you enjoy it and find it useful.
 
+All Tutorials
+-------------
+
+You can [browse all tutorials here](/pages/table-of-contents.html).
+
 Newest Tutorials
 ----------------
 
@@ -27,7 +32,7 @@ Examples
 
 * [Installing MySQL](/pages/installing-mysql.html)
 * [Hello, World!](/pages/hello-world.html "Hello, World!")
-* [Explanation of how it works](/pages/test.html)
+* [Syntax explanation](/pages/explanation.html)
 
 Contributing
 ------------

@@ -8,7 +8,7 @@ Examples
 
 * [Installing MySQL](http://tutorials.github.com/pages/installing-mysql.html)
 * [Hello, World!](http://tutorials.github.com/pages/hello-world.html "Hello, World!")
-* [Explanation of how it works](http://tutorials.github.com/pages/test.html)
+* [Syntax explanation](http://tutorials.github.com/pages/explanation.html)
 
 Contributing
 ============
