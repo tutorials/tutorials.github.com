@@ -11,9 +11,13 @@ task :update_toc do
 
   site = Jekyll::Site.new(Jekyll.configuration({})) and site.read
 
-  pages = site.pages.reject {|p| p.data["ignore"] }.reverse
+  pages = site.pages.reject do |page|
+    page.data["ignore"]
+  end.sort_by! do |page|
+    File.mtime(File.join(FileUtils.pwd, "pages", page.name)).to_i
+  end.reverse
 
-  toc_path = File.join(FileUtils.pwd, "pages", "table_of_contents.md")
+  toc_path = File.join(FileUtils.pwd, "pages", "table-of-contents.md")
   temp = Tempfile.new("table_of_contents.md")
 
   begin
@@ -22,7 +26,7 @@ task :update_toc do
     end
     temp.puts "<!--- BEGIN TOC -->"
     pages.each_with_index do |page, index|
-      temp.puts " * [#{page.data["title"]}](#{page.destination('')})"
+      temp.puts "* [#{page.data["title"]}](#{page.destination('')}?#{File.mtime(File.join(FileUtils.pwd, "pages", page.name)).to_i})"
     end
     temp.puts "<!--- END TOC -->"
     FileUtils.mv(temp.path, toc_path)

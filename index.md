@@ -17,22 +17,19 @@ This project originated as a full-blown rails app backed by a database, and I re
 
 All Tutorials
 -------------
-
-You can [browse all tutorials here](/pages/table-of-contents.html).
+You can [browse all tutorials here](/pages/table-of-contents.html?1340248769).
 
 Newest Tutorials
 ----------------
-
- * [Retrieving Storm Cluster Statistics from Nimbus](/pages/retrieving-storm-data-from-nimbus.html)
- * [Installing MySQL](/pages/installing-mysql.html)
- * [Hello, World!](/pages/hello-world.html)
+* [Retrieving Storm Cluster Statistics from Nimbus](/pages/retrieving-storm-data-from-nimbus.html?1340248769)
+* [Installing MySQL](/pages/installing-mysql.html?1339980010)
+* [Hello, World!](/pages/hello-world.html?1339978842)
 
 Examples
 --------
-
-* [Installing MySQL](/pages/installing-mysql.html)
-* [Hello, World!](/pages/hello-world.html "Hello, World!")
-* [Syntax explanation](/pages/explanation.html)
+* [Installing MySQL](/pages/installing-mysql.html?1339980010)
+* [Hello, World!](/pages/hello-world.html?1339978842)
+* [Syntax explanation](/pages/explanation.html?1340248769)
 
 Contributing
 ------------
