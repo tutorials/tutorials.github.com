@@ -79,16 +79,17 @@ If you clicked on the "Source (1)" `li` then you should see this:
 
 ## Installing tutorials.github.com Locally
 
-First we need to [https://github.com/tutorials/tutorials.github.com/fork_select](fork the repo). Then we need to clone it:
+First you need to [fork the repo](https://github.com/tutorials/tutorials.github.com/fork_select). Then you need to clone your fork and checkout a topic-branch:
 
 {% highlight sh %}
 git clone git@github.com:some_user/tutorials.github.com.git
+cd tutorials.github.com
+git checkout -b my-awesome-tutorial
 {% endhighlight %}
 
 Now we need to install some gems using bundler:
 
 {% highlight sh %}
-cd tutorials.github.com
 bundle
 {% endhighlight %}
 
@@ -99,10 +100,6 @@ jekyll --server --auto
 {% endhighlight %}
 
 Now you can browse to [http://localhost:4000](http://localhost:4000) and see the site running locally.
-
-{% highlight sh %}
-jekyll --server --auto
-{% endhighlight %}
 
 ## Creating a New Tutorial
 
