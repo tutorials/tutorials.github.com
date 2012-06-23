@@ -179,6 +179,18 @@ strong {
   text-decoration:none;
 }
 
+.headroom{
+  margin: 20px 0 0 0;
+}
+
+.footroom{
+  margin: 0 0 20px;
+}
+
+div.social a.ftg{
+  width:85px;
+}
+
 div.tutorial p.about span{
   margin-right:5px;
 }
