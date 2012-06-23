@@ -20,19 +20,18 @@ data-facets='{"Operating System": "OS X", "Package Management": "Homebrew", "She
 We assume you've [signed up for EC2](https://aws-portal.amazon.com/gp/aws/developer/registration).  We also assume your machine has a public key setup (commonly `~/.ssh/id_rsa` and `~/id_rsa.pub`).
 
 ## Download Credential Files
-First, you need to download some credential files to your machine. [Download your X.509 certificates](https://portal.aws.amazon.com/gp/aws/securityCredentials) and then put them into your `~/.ec2` directory:
+First, you need to download some credential files to your machine. Go to the [AWS Security Credentials](https://portal.aws.amazon.com/gp/aws/securityCredentials) page, click "X.509 Certificates", create a new certificate if you need to, download the files when prompted, and then put them into your `~/.ec2` directory:
 
 {% highlight sh %}
 mkdir ~/.ec2
-cp ~/Downloads/[cert,pk]-*.pem ~/.ec2
+cp ~/Downloads/{cert,pk}-*.pem ~/.ec2
 {% endhighlight %}
 
 ## Install the EC2 Command Line Tools
 Now let's install the two packages we need:
 
 {% highlight sh %}
-brew install ec2-ami-tools
-brew install ec2-api-tools
+brew install ec2-{api,ami}-tools
 {% endhighlight %}
 
 Copy the following to your `~/.bash_profile`:
@@ -48,7 +47,11 @@ export AWS_SECRET_ACCESS_KEY"=..."
 
 Where `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are available from the "Access Keys" tab on the [https://portal.aws.amazon.com/gp/aws/securityCredentials](Amazon Security Credentials page).
 
-And we 
+Don't forget to reload your `.bash_profile`:
+
+{% highlight sh %}
+source ~/.bash_profile
+{% endhighlight %}
 
 ## Uploading your Access Keys
 Some people use the public/private keys that Amazon gives them, but I find it easier to use the same public key on my laptop that I already use for things like Github and servers at work.  To upload, you can use [this helpful script from Eric Hammond](http://alestic.com/2010/10/ec2-ssh-keys) (slightly modified):
@@ -62,6 +65,12 @@ for region in $regions; do
   echo $region
   ec2-import-keypair --region $region --public-key-file $publickeyfile $keypair
 done
+{% endhighlight %}
+
+If you get an error like this, you have to wait a little while until Amazon processes your account:
+
+{% highlight %}
+Client.OptInRequired: You are not subscribed to this service. Please go to http://aws.amazon.com to subscribe.
 {% endhighlight %}
 
 ## Test it All Works
