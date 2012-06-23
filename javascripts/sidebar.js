@@ -9,21 +9,30 @@ $(function() {
 
   // Render license/source information
   _(tutorials).each(function(tutorial){
-    t = $(tutorial)
-    d = t.data()
-    attribution = ""
-    if(d.authorGithub) {
-      attribution += '<li>Author: <a href="http://github.com/' + d.authorGithub + '">' + d.authorGithub + '</a></li>'
-    } else if(d.author) {
-      attribution += "<li>Author: " + d.author + "</li>"
-    }
-    if(d.source) {
-      attribution += '<li><a href="' + d.source + '">Original Source</a></li>'
-      if(d.license) {
-        attribution += '<li><a href="' + d.license + '">License</a></li>'
+    t = $(tutorial);
+    d = t.data();
+    var meta = d.authorGithub || d.author || d.source || d.license;
+    if(meta) {
+      var attribution = "";
+      if(d.authorGithub) {
+        attribution += '<span>by <a href="http://github.com/' + d.authorGithub + '">' + d.authorGithub + '</a></span>';
+      } else if(d.author) {
+        attribution += "<span>by " + d.author + "</span>"
       }
+      if(d.source) {
+        if (d.authorGithub || d.author) {
+          attribution += '<span>|</span>';
+        }
+        attribution += '<span><a href="' + d.source + '">Original Source</a></span>';
+      }
+      if(d.license) {
+        if (d.authorGithub || d.author || d.source) {
+          attribution += '<span>|</span>';
+        }
+        attribution += '<span><a href="' + d.license + '">License</a></span>';
+      }
+      t.prepend("<p class='about'>" + attribution + "</p>");
     }
-    if(attribution) { t.prepend("<ul>" + attribution + "</ul>")}
   });
 
   dict = _.chain(tutorials)
