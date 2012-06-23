@@ -17,11 +17,12 @@ This project originated as a full-blown rails app backed by a database, and I re
 
 All Tutorials
 -------------
-You can [browse all tutorials here](/pages/table-of-contents.html?1340248769).
+You can [browse all tutorials here](/pages/table-of-contents.html?1340490172).
 
 Newest Tutorials
 ----------------
-* [Creating a Production Storm Cluster](/pages/creating-a-production-storm-cluster.html?1340487118)
+* [Controlling EC2 from the Console](/pages/controlling-ec2-from-the-console.html?1340490172)
+* [Creating a Production Storm Cluster](/pages/creating-a-production-storm-cluster.html?1340487894)
 * [Retrieving Storm Cluster Statistics from Nimbus](/pages/retrieving-storm-data-from-nimbus.html?1340398351)
 * [Installing MySQL](/pages/installing-mysql.html?1339980010)
 * [Hello, World!](/pages/hello-world.html?1339978842)
