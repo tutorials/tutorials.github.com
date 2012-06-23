@@ -162,6 +162,27 @@ strong {
   margin: 0;
 }
 
+#sidebar ul, #main div.tutorial ul {
+  list-style:none;
+  margin-left:0;
+  padding:0;
+}
+
+#sidebar ul li{
+  cursor:pointer;
+  color:#39C;
+}
+
+#sidebar ul li:hover{
+  cursor:pointer;
+  color:#2c85b1;
+  text-decoration:none;
+}
+
+div.tutorial p.about span{
+  margin-right:5px;
+}
+
 section#main {
   width:560px;
   float:right;
