@@ -10,7 +10,7 @@ This tutorial will show how to obtain basic storm topology statistics from nimbu
 <div
   markdown="1"
   class="tutorial"
-  data-github-author="Whitespace"
+  data-author-github="Whitespace"
   data-license="http://creativecommons.org/licenses/by/3.0/"
   data-facets='{"Operating System": "OS X 10.7", "Language": "Ruby", "Storm Version": "0.7.0", "Thrift Version": "0.7.0", "Package Management": "Homebrew"}'>
 
@@ -98,12 +98,13 @@ ruby test.rb
 {% endhighlight %}
 
 Now you can take that data and write it to where you'd like.  Enjoy!
+<hr />
 </div>
 
 <div
   markdown="1"
   class="tutorial"
-  data-github-author="Whitespace"
+  data-author-github="Whitespace"
   data-license="http://creativecommons.org/licenses/by/3.0/"
   data-facets='{"Operating System": "OS X 10.7", "Language": "Python", "Storm Version": "0.7.0", "Thrift Version": "0.7.0", "Package Management": "PyPI"}'>
 
@@ -197,4 +198,5 @@ python test.py
 {% endhighlight %}
 
 Now you can take that data and write it to where you'd like.  Enjoy!
+<hr />
 </div>

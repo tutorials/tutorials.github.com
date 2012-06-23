@@ -19,9 +19,9 @@ $(function() {
     }
     if(d.source) {
       attribution += '<li><a href="' + d.source + '">Original Source</a></li>'
-      if(d.license) {
-        attribution += '<li><a href="' + d.license + '">License</a></li>'
-      }
+    }
+    if(d.license) {
+      attribution += '<li><a href="' + d.license + '">License</a></li>'
     }
     if(attribution) { t.prepend("<ul>" + attribution + "</ul>")}
   });
