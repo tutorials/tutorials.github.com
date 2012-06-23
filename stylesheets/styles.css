@@ -201,6 +201,18 @@ section#main {
   padding-bottom:50px;
 }
 
+section#main h1.fixed_top{
+  position:fixed;
+  top:0px;
+  z-index:100;
+  width: 560px;
+  padding: 10px 0;
+  -moz-box-shadow: 0px 5px 10px #FFF;
+  -webkit-box-shadow: 0px 5px 10px #FFF;
+  box-shadow: 0px 5px 10px #FFF;
+  background:#FFF;
+}
+
 small {
   font-size:11px;
 }

@@ -54,6 +54,17 @@ $(function() {
   // Draw the sidebar
   redraw();
 
+  // sticky header
+  var $title = $('section#main h1');
+  var headOffset = 50;
+  $(window).scroll(function(){
+    if( $(window).scrollTop() > headOffset ) {
+      $title.addClass("fixed_top");
+    } else {
+      $title.removeClass("fixed_top");
+    }
+  });
+
   // Hide tutorials if the user clicks on a facet
   $("nav li").live("click", function(e) {
     target = $(this).data();
