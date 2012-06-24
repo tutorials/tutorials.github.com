@@ -17,21 +17,21 @@ This project originated as a full-blown rails app backed by a database, and I re
 
 All Tutorials
 -------------
-You can [browse all tutorials here](/pages/table-of-contents.html?1340490172).
+You can [browse all tutorials here](/pages/table-of-contents.html?1340499018).
 
 Newest Tutorials
 ----------------
-* [Controlling EC2 from the Console](/pages/controlling-ec2-from-the-console.html?1340490172)
-* [Creating a Production Storm Cluster](/pages/creating-a-production-storm-cluster.html?1340487894)
-* [Retrieving Storm Cluster Statistics from Nimbus](/pages/retrieving-storm-data-from-nimbus.html?1340398351)
-* [Installing MySQL](/pages/installing-mysql.html?1339980010)
-* [Hello, World!](/pages/hello-world.html?1339978842)
+* [Controlling EC2 from the Console](/pages/controlling-ec2-from-the-console.html?ts=1340499018)
+* [Creating a Production Storm Cluster](/pages/creating-a-production-storm-cluster.html?ts=1340499018)
+* [Retrieving Storm Cluster Statistics from Nimbus](/pages/retrieving-storm-data-from-nimbus.html?ts=1340499018)
+* [Installing MySQL](/pages/installing-mysql.html?ts=1340499018)
+* [Hello, World!](/pages/hello-world.html?ts=1340499018)
 
 Examples
 --------
-* [Installing MySQL](/pages/installing-mysql.html?1339980010)
-* [Hello, World!](/pages/hello-world.html?1339978842)
-* [Syntax explanation](/pages/explanation.html?1340248769)
+* [Installing MySQL](/pages/installing-mysql.html?ts=1340499018)
+* [Hello, World!](/pages/hello-world.html?ts=1340499018)
+* [Syntax explanation](/pages/explanation.html?1340499018)
 
 Contributing
 ------------
