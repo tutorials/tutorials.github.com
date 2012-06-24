@@ -54,16 +54,27 @@ $(function() {
   // Draw the sidebar
   redraw();
 
-  // sticky header
-  var $title = $('section#main h1');
-  var headOffset = 50;
-  $(window).scroll(function(){
-    if( $(window).scrollTop() > headOffset ) {
-      $title.addClass("fixed_top");
-    } else {
-      $title.removeClass("fixed_top");
+  //Fix sidebar
+  function sidebar_fix() {
+    var header_height = $('header').height(),
+        footer_height = $('footer').height(),
+        window_height = $(window).height(),
+        $nav_sidebar  = $('nav#sidebar'),
+        sidebar_height= $nav_sidebar.height(),
+        difference = window_height - (header_height + footer_height);
+    if (difference>0) {
+      $nav_sidebar.height(sidebar_height+difference);
     }
-  });
+  }
+  sidebar_fix();
+  $(window).resize(function() { console.log('scroll'); sidebar_fix() });
+
+  // title fix
+  var $section = $('section#main'),
+      $title = $section.find('h1'),
+      title_height = $title.height(),
+      set_padding = title_height + 20;
+  $section.css('paddingTop',set_padding);
 
   // Hide tutorials if the user clicks on a facet
   $("nav li").live("click", function(e) {
