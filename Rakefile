@@ -26,7 +26,7 @@ task :update_toc do
     end
     temp.puts "<!--- BEGIN TOC -->"
     pages.each_with_index do |page, index|
-      temp.puts "* [#{page.data["title"]}](#{page.destination('')}?#{File.mtime(File.join(FileUtils.pwd, "pages", page.name)).to_i})"
+      temp.puts "* [#{page.data["title"]}](#{page.destination('')}?ts=#{File.mtime(File.join(FileUtils.pwd, "pages", page.name)).to_i})"
     end
     temp.puts "<!--- END TOC -->"
     FileUtils.mv(temp.path, toc_path)
