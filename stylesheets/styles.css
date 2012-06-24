@@ -107,63 +107,9 @@ header {
   box-shadow: 0px 5px 10px #FFF;
   padding-top:10px;
 }
-
-#download {
-  list-style:none;
-  height:40px;
-
-  padding:0;
-
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
-
-#download li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-#download a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
 strong {
   color:#222;
   font-weight:700;
-}
-
-#download li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-#download li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-#download a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
 }
 
 #sidebar{
@@ -240,7 +186,11 @@ section#main h1{
 }
 
 a.ribbon img.fork {
-  position: fixed; top: 0; left: 0; border: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index:3;
 }
 
 small {
@@ -262,52 +212,119 @@ footer {
   z-index:1;
 }
 
-@media print, screen and (max-width: 960px) {
+a.hidden_ribbon{
+  display:none;
+  border-top:1px dotted #CCC;
+  margin-top:10px;
+}
 
+@media print, screen and (max-width: 960px) {
+  body {
+    padding:15px;
+  }
   div.wrapper {
     width:auto;
     margin:0;
   }
-
   header, section#main, footer {
     float:none;
     position:static;
     width:auto;
   }
-
   header {
-    padding-right:320px;
+    width:100%;
   }
-
+  a.ribbon img.fork {
+    display:none;
+  }
+  a.hidden_ribbon{
+    display:block;
+  }
   section#main {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
+    width:100%;
   }
-
+  section#main h1{
+    width:100%;
+  }
   header a small {
     display:inline;
   }
-
-  #download {
-    position:absolute;
-    right:50px;
-    top:52px;
+  #sidebar ul li{
+    float:left;
+  }
+  #sidebar ul li span.count{
+    display:none;
+  }
+  #sidebar ul li:after{
+    margin-right:5px;
+    content:"|";
+  }
+  #sidebar ul li:last-child:after{
+    content:"";
+  }
+  #sidebar ul {
+    *zoom: 1;
+  }
+  #sidebar ul:before, #sidebar ul:after {
+    display: table;
+    content: "";
+  }
+  #sidebar ul:after {
+    clear: both;
   }
 }
 
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
+    padding:15px;
   }
-
   header {
     padding:0;
+    width:100%;
   }
-
-  #download, header p.view {
+  header p.view {
     position:static;
+  }
+  section#main{
+    float:left;
+    width:100%;
+  }
+  section#main h1{
+    width:100%;
+  }
+  a.ribbon img.fork {
+    display:none;
+  }
+  a.hidden_ribbon{
+    display:block;
+  }
+  #sidebar ul li{
+    float:left;
+  }
+  #sidebar ul li span.count{
+    display:none;
+  }
+  #sidebar ul li:after{
+    margin-right:5px;
+    content:"|";
+  }
+  #sidebar ul li:last-child:after{
+    content:"";
+  }
+  #sidebar ul {
+    *zoom: 1;
+  }
+  #sidebar ul:before, #sidebar ul:after {
+    display: table;
+    content: "";
+  }
+  #sidebar ul:after {
+    clear: both;
   }
 }
 
@@ -315,10 +332,47 @@ footer {
   body {
     padding:15px;
   }
-
-  #download {
+  a.ribbon img.fork {
     display:none;
   }
+  a.hidden_ribbon{
+    display:block;
+  }
+  section#main{
+    float:left;
+    width:100%;
+  }
+  section#main h1{
+    width:100%;
+  }
+  header{
+    padding:0;
+    width:100%;
+  }
+  #sidebar ul li{
+    float:left;
+  }
+  #sidebar ul li span.count{
+    display:none;
+  }
+  #sidebar ul li:after{
+    margin-right:5px;
+    content:"|";
+  }
+  #sidebar ul li:last-child:after{
+    content:"";
+  }
+  #sidebar ul {
+    *zoom: 1;
+  }
+  #sidebar ul:before, #sidebar ul:after {
+    display: table;
+    content: "";
+  }
+  #sidebar ul:after {
+    clear: both;
+  }
+
 }
 
 @media print {
@@ -326,5 +380,14 @@ footer {
     padding:0.4in;
     font-size:12pt;
     color:#444;
+  }
+  section#main{
+    border:0px none;
+  }
+  header{
+    padding-top:50px;
+  }
+  footer{
+    display:none;
   }
 }

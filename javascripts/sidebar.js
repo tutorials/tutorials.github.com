@@ -64,11 +64,15 @@ $(function() {
         difference = window_height - (header_height + footer_height);
 
     if (difference>0) {
-      $nav_sidebar.height(sidebar_height+difference);
+      if ($(window).width>970){
+        $nav_sidebar.height(sidebar_height+difference);
+      } else {
+        $nav_sidebar.css('height', 'auto');
+      }
     }
   }
   sidebar_fix();
-  $(window).resize(function() { console.log('scroll'); sidebar_fix() });
+  $(window).resize(function() { sidebar_fix() });
 
   // title fix
   var $section = $('section#main'),

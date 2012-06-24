@@ -33,6 +33,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <a href="https://github.com/tutorials/tutorials.github.com" class="ribbon"><img class="fork" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
       <header>
         <div id="static_inner">
           <h1><a href="/">tutorials.github.com</a></h1>
@@ -62,7 +63,7 @@
           <a href="https://twitter.com/githubtutorials" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @githubtutorials</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
-        <a href="https://github.com/tutorials/tutorials.github.com" class="ribbon"><img class="fork" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/tutorials/tutorials.github.com" class="hidden_ribbon">Fork tutorials on GitHub</a>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
@@ -75,7 +76,7 @@
               <% if(_(filters).any(function(filter) { return filter.name === name && filter.value === val; })) { %>
                 <strong><%= val %></strong>
               <% } else { %>
-                <%= val %> (<%= count %>)
+                <%= val %> <span class='count'>(<%= count %>)</span>
               <% } %>
             </li>
           <% }) %>
