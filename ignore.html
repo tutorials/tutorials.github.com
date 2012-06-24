@@ -4,8 +4,7 @@
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-30727234-1']);
-      _gaq.push(['_trackPageview']);
-
+      _gaq.push(['_setVar', 'test_value']);
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -13,7 +12,7 @@
       })();
     </script>
   </head>
-  <body onload="_gaq.push(['_setVar', 'test_value']);">
+  <body>
     Google Analytics will now ignore you.
   </body>
 </html>
