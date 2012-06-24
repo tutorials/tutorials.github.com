@@ -57,11 +57,12 @@ $(function() {
   //Fix sidebar
   function sidebar_fix() {
     var header_height = $('header').height(),
-        footer_height = $('footer').height(),
+        footer_height = 150, //fixed
         window_height = $(window).height(),
         $nav_sidebar  = $('nav#sidebar'),
         sidebar_height= $nav_sidebar.height(),
         difference = window_height - (header_height + footer_height);
+
     if (difference>0) {
       $nav_sidebar.height(sidebar_height+difference);
     }
