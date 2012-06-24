@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
+  margin:0px;
+  padding:0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,7 +66,7 @@ code, pre {
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;  
+  background: #f8f8f8;
   border-radius:5px;
   border:1px solid #e5e5e5;
   overflow-x: auto;
@@ -96,16 +97,23 @@ img {
 }
 
 header {
-  width:270px;
+  width:250px;
   float:left;
+  position:fixed;
+  z-index:2;
+  background:#fff;
+  -moz-box-shadow: 0px 5px 10px #FFF;
+  -webkit-box-shadow: 0px 5px 10px #FFF;
+  box-shadow: 0px 5px 10px #FFF;
+  padding-top:10px;
 }
 
 #download {
   list-style:none;
   height:40px;
-  
+
   padding:0;
-  
+
   background: #eee;
   background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
@@ -113,7 +121,7 @@ header {
   background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
+
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
@@ -158,14 +166,81 @@ strong {
   color:#222;
 }
 
+#sidebar{
+  overflow-y: scroll;
+  height: 400px;
+}
+
 #sidebar ul h3 {
   margin: 0;
 }
 
+#sidebar ul, #main div.tutorial ul {
+  list-style:none;
+  margin-left:0;
+  padding:0;
+}
+
+#sidebar ul li{
+  cursor:pointer;
+  color:#39C;
+}
+
+#sidebar ul li:hover{
+  cursor:pointer;
+  color:#2c85b1;
+  text-decoration:none;
+}
+
+.headroom{
+  margin: 20px 0 0 0;
+}
+
+.less_headroom{
+  margin: 10px 0 0 0;
+}
+
+.footroom{
+  margin: 0 0 20px;
+}
+
+.less_footroom{
+  margin: 0 0 10px;
+}
+
+.line_bottom{
+ border-bottom: 1px dotted #ccc;
+ margin-bottom:10px;
+}
+
+div.social a.ftg{
+  width:79px;
+}
+
+div.tutorial p.about span{
+  margin-right:5px;
+}
+
 section#main {
-  width:560px;
+  width:580px;
   float:right;
-  padding-bottom:50px;
+  padding:50px 0;
+}
+
+section#main h1{
+  position:fixed;
+  top:0px;
+  z-index:1;
+  width: 580px;
+  padding: 10px 0;
+  -moz-box-shadow: 0px 5px 10px #FFF;
+  -webkit-box-shadow: 0px 5px 10px #FFF;
+  box-shadow: 0px 5px 10px #FFF;
+  background:#FFF;
+}
+
+a.ribbon img.fork {
+  position: fixed; top: 0; left: 0; border: 0;
 }
 
 small {
@@ -180,39 +255,41 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:250px;
   float:left;
-  bottom:50px;
+  bottom:10px;
+  position:fixed;
+  z-index:1;
 }
 
 @media print, screen and (max-width: 960px) {
-  
+
   div.wrapper {
     width:auto;
     margin:0;
   }
-  
+
   header, section#main, footer {
     float:none;
     position:static;
     width:auto;
   }
-  
+
   header {
     padding-right:320px;
   }
-  
+
   section#main {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
   }
-  
+
   header a small {
     display:inline;
   }
-  
+
   #download {
     position:absolute;
     right:50px;
@@ -224,11 +301,11 @@ footer {
   body {
     word-wrap:break-word;
   }
-  
+
   header {
     padding:0;
   }
-  
+
   #download, header p.view {
     position:static;
   }
@@ -238,7 +315,7 @@ footer {
   body {
     padding:15px;
   }
-  
+
   #download {
     display:none;
   }
