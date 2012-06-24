@@ -384,8 +384,8 @@ a.hidden_ribbon{
   section#main{
     border:0px none;
   }
-  header{
-    padding-top:50px;
+  header h1{
+    visibility: hidden;
   }
   footer{
     display:none;
