@@ -69,9 +69,7 @@ done
 
 If you get an error like this, you have to wait a little while until Amazon processes your account:
 
-{% highlight %}
-Client.OptInRequired: You are not subscribed to this service. Please go to http://aws.amazon.com to subscribe.
-{% endhighlight %}
+    Client.OptInRequired: You are not subscribed to this service. Please go to http://aws.amazon.com to subscribe.
 
 ## Test it All Works
 Once we've done all that, we can test it by doing:
