@@ -88,10 +88,10 @@ $(function() {
       return filter.name === target.name && filter.value === target.value;
     });
     if(existing_filter) {
-      _gaq.push(['_trackEvent', 'filters', 'remove', existing_filter.name, filters.size]);
+      _gaq.push(['_trackEvent', 'filters - remove', existing_filter.name, existing_filter.value, filters.size]);
       filters = _(filters).without(existing_filter);
     } else {
-      _gaq.push(['_trackEvent', 'filters', 'apply', target.name, filters.size]);
+      _gaq.push(['_trackEvent', 'filters - apply', target.name, target.value, filters.size]);
       filters = _(filters).reject(function(filter) { return filter.name === target.name && filter.value === target.value; });
       filters.push(target);
     }

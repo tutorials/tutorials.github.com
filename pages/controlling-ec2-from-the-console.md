@@ -80,6 +80,9 @@ ec2-describe-instances
 
 If you don't see an error, you're all set!
 
+## Further Reading
+Since there are almost 300 commands available to you now, your best bet is to take a look at the [EC2 Command Line Reference](http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference/Welcome.html).  One command that you'll want to memorize is [ec2-run-instances](http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-RunInstances.html), which will spawn a new ec2 instance when you give it an amazon machine image (AMI) id.
+
 ## References
 These links were helpful in getting my machine setup and writing this tutorial:
 
